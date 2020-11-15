@@ -16,7 +16,7 @@ Element.prototype.addEventListener = function (type, handler, ...args) {
     if (type === clickoutName) {
         const clickedOutElement = this;
         const windowHandler = function(event) {
-            if (this !== clickedOutElement || event.target !== this){
+            if (!clickedOutElement.contains(event.target) || event.target !== clickedOutElement){
                 clickedOutElement.dispatchEvent(clickoutEvent);
             }
         };
