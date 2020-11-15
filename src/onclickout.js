@@ -39,6 +39,7 @@ Element.prototype.removeEventListener = function (type, handler, ...args) {
         const windowhandlerData = windowClickHandlers.find(wd => wd && wd.h === handler && wd.el === clickedOutElement);
         if (windowhandlerData && windowhandlerData.wh) {
             window.removeEventListener(click, windowhandlerData.wh);
+            windowClickHandlers = windowClickHandlers.filter(wd => !(wd && wd.h === handler && wd.el === clickedOutElement));
         }
     }
 
