@@ -1,0 +1,36 @@
+{
+  "name": "clickout",
+  "version": "1.0.0",
+  "description": "Tiny library to add clickout event triggered when user clicks outside an element.",
+  "main": "dist/onclickout.min.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "qunit --require esm",
+    "build-prod": "webpack --config ./webpack.config.prod.js",
+    "build-dev": "webpack --config ./webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanni87/clickout.git"
+  },
+  "keywords": [
+    "on",
+    "click",
+    "out"
+  ],
+  "author": "Sanni87",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sanni87/clickout/issues"
+  },
+  "homepage": "https://github.com/Sanni87/clickout#readme",
+  "devDependencies": {
+    "jsdom": "^16.4.0",
+    "qunit": "^2.11.3",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "esm": "^3.2.25"
+  }
+}
